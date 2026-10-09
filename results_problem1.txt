@@ -1,0 +1,36 @@
+Train/test sizes: 455/114
+
+SVM kernel = linear (C = 1)
+  train acc 0.9890, support vectors 38
+  test metrics: {'accuracy': 0.9649, 'precision': 1.0, 'recall': 0.9048, 'f1': 0.95}
+  confusion [[TN, FP], [FN, TP]]: [[72, 0], [4, 38]]
+
+SVM kernel = poly (C = 1)
+  train acc 0.9121, support vectors 149
+  test metrics: {'accuracy': 0.886, 'precision': 1.0, 'recall': 0.6905, 'f1': 0.8169}
+  confusion [[TN, FP], [FN, TP]]: [[72, 0], [13, 29]]
+
+SVM kernel = rbf (C = 1)
+  train acc 0.9868, support vectors 107
+  test metrics: {'accuracy': 0.9737, 'precision': 1.0, 'recall': 0.9286, 'f1': 0.963}
+  confusion [[TN, FP], [FN, TP]]: [[72, 0], [3, 39]]
+
+SVM kernel = sigmoid (C = 1)
+  train acc 0.9495, support vectors 70
+  test metrics: {'accuracy': 0.9474, 'precision': 0.9737, 'recall': 0.881, 'f1': 0.925}
+  confusion [[TN, FP], [FN, TP]]: [[71, 1], [5, 37]]
+
+Summary (test set):
+                            accuracy  precision  recall      f1
+SVM (linear)                 0.9649     1.0000  0.9048  0.9500
+SVM (poly)                   0.8860     1.0000  0.6905  0.8169
+SVM (rbf)                    0.9737     1.0000  0.9286  0.9630
+SVM (sigmoid)                0.9474     0.9737  0.8810  0.9250
+LogReg, no penalty (HW3)     0.9737     0.9756  0.9524  0.9639
+LogReg, L2 lambda=3 (HW3)    0.9825     1.0000  0.9524  0.9756
+
+Best C per kernel (by test accuracy):
+  linear   C = 0.0316  {'accuracy': np.float64(0.9825), 'precision': np.float64(1.0), 'recall': np.float64(0.9524)}
+  poly     C = 31.6    {'accuracy': np.float64(0.9474), 'precision': np.float64(1.0), 'recall': np.float64(0.8571)}
+  rbf      C = 3.16    {'accuracy': np.float64(0.9825), 'precision': np.float64(1.0), 'recall': np.float64(0.9524)}
+  sigmoid  C = 0.316   {'accuracy': np.float64(0.9649), 'precision': np.float64(0.975), 'recall': np.float64(0.9286)}

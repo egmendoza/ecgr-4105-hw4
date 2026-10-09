@@ -1,0 +1,19 @@
+Train/test sizes: 436/109
+SVR kernel = linear: support vectors 366 of 436
+SVR kernel = poly: support vectors 375 of 436
+SVR kernel = rbf: support vectors 354 of 436
+SVR kernel = sigmoid: support vectors 418 of 436
+
+Summary:
+                           train_R2  test_R2     test_RMSE      test_MAE
+SVR (linear)                0.6697   0.6180  1.389562e+06  1.000478e+06
+SVR (poly)                  0.7982   0.5415  1.522343e+06  1.090739e+06
+SVR (rbf)                   0.7815   0.5970  1.427320e+06  1.049355e+06
+SVR (sigmoid)              -3.7337  -2.1769  4.007237e+06  2.607715e+06
+Linear reg. + L2 penalty    0.6781   0.6436  1.342156e+06  9.791469e+05
+
+Best C per kernel (by test R2):
+  linear   C = 316     test R2 = 0.6181
+  poly     C = 1       test R2 = 0.5415
+  rbf      C = 10      test R2 = 0.6229
+  sigmoid  C = 0.1     test R2 = 0.5528
